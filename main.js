@@ -1,32 +1,27 @@
 let usuario= prompt("Ingrese su usuario");
 let contraseña= prompt("Ingrese Contraseña");
+let miCuenta= "0";
+let cuentaTotal= "0";
 
 if(usuario =="Admin" && contraseña=="1234"){
     alert("Bienvenido a Pulperia de Beto&Clau. Haga su pedido!");
     let pedido= prompt("Que vas a pedir? \n 1- Asado $400 \n 2- Pulpon $400 \n 3- Papas Fritas $150 \n 4- Coca-Cola $80 \n 5- Agua $60 \n 0- Finalizar pedido");
-    switch(pedido){
-        case "1":
-            console.log("Añadiste Asado");
-            let Asado= ParseInt("400");
-        break;
-        case "2":
-            console.log("Añadiste Pulpon");
-            let Pulpon= ParseInt("400");
-        break;
-        case "3":
-            console.log("Añadiste Papas Fritas");
-            let PFritas= ParseInt("150");
-        break;
-        case "4":
-            console.log("Añadiste Coca-Cola");
-            let Coca= ParseInt("80");
-        break;
-        case "5":
-            console.log("Añadiste Agua");
-            let Agua= ParseInt("60");
-        break;
-            
+    if(pedido=="1"){
+        miCuenta= ParseInt(miCuenta + 400);
     }
+    if(pedido=="2"){
+        miCuenta= ParseInt(miCuenta + 400);
+    }
+    if(pedido=="3"){
+        miCuenta= ParseInt(miCuenta + 150);
+    }
+    if(pedido=="4"){
+        miCuenta= ParseInt(miCuenta + 80);
+    }
+    if(pedido=="5"){
+        miCuenta= ParseInt(miCuenta + 60);
+    }
+
 
 while (pedido != 0) {
     alert("Ingresaste " + pedido);
@@ -35,8 +30,8 @@ while (pedido != 0) {
 }
 
 if(pedido== "0"){
-    let miCuenta= ParseInt(pedido + pedido)
-    alert("El total a pagar es " + miCuenta )
+    cuentaTotal=miCuenta
+    alert("El total a pagar es " + cuentaTotal );
 }
 }
 else{
